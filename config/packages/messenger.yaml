@@ -20,9 +20,10 @@ framework:
             Symfony\Component\Notifier\Message\ChatMessage: async
             Symfony\Component\Notifier\Message\SmsMessage: async
 
-            # Route your messages to the transports
-            'App\Message\*': sync
-            
+            App\Message\*: sync
+            # events should be processed asynchronously
+            App\Event\*: async
+
 when@test:
     framework:
         messenger:

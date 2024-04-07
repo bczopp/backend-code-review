@@ -21,21 +21,8 @@ class MessageRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Message::class);
     }
-    
-    public function by(Request $request): array
-    {
-        $status = $request->query->get('status');
-        
-        if ($status) {
-            $messages = $this->getEntityManager()
-                ->createQuery(
-                    sprintf("SELECT m FROM App\Entity\Message m WHERE m.status = '%s'", $status)
-                )
-                ->getResult();
-        } else {
-            $messages = $this->findAll();
-        }
-        
-        return $messages;
-    }
+
+    // additional Methods in here are not necessary. given methods already do everything needed that concerns reading from the database
+    // also the method by() contained too much knowledge of the system.
+    // for example a repository does not need to know the possible values for a attribute of the entity (status in this case)
 }
