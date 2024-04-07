@@ -9,6 +9,9 @@ use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\HttpFoundation\Request;
 
+/**
+ * @covers \App\Controller\MessageController
+ */
 class MessageControllerTest extends TestCase
 {
     private MessageController $controller;

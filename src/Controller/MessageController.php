@@ -7,14 +7,12 @@ use App\CQ\Command\SendMessage;
 use App\CQ\CommandHandler\SendMessageHandler;
 use App\CQ\Query\GetMessages;
 use App\CQ\QueryHandler\GetMessagesHandler;
-use Controller\MessageControllerTest;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
 /**
- * @see MessageControllerTest
  * TODO: review both methods and also the `openapi.yaml` specification
  *       Add Comments for your Code-Review, so that the developer can understand why changes are needed.
  */
